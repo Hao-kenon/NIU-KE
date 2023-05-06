@@ -5,22 +5,19 @@ int main()
 {
 	int count = 0;
 	int i;
-	while(I>=Y)
+	for (i = Y; i <= I; i++)
 	{
-		for (i = Y; i <= I; i++)
+		int t = i;
+		while (t > 0)
 		{
-			int t = i;
-			while (t > 0)
+			if (t % 10 == X)
 			{
-				if (t % 10 == X)
-				{
-					count++;
-					break;
-				}
-				t /= 10;
+				count++;
+				break;
 			}
+			t /= 10;
 		}
-	}
-	printf("%d-%dÖĞÒ»¹²°üº¬Êı×Ö%dµÄ¸öÊıÊÇ%d\n",Y,I,X ,count);
+	}	
+	printf("%d-%dä¸­ä¸€å…±åŒ…å«æ•°å­—%dçš„ä¸ªæ•°æ˜¯%d\n",Y,I,X ,count);
 	return 0;
 }
